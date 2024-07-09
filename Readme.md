@@ -63,25 +63,24 @@ The E-Invite App is a web application that allows users to create and manage ele
 
 2. Django Settings
   - Configure your `settings.py` with your database and other settings
+    ```sh
+ #### invite_project/settings.py
  
- invite_project/settings.py
-```sh
- DATABASES = {
+ `DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.sqlite3',
          'NAME': BASE_DIR / 'db.sqlite3',
      }
  }
 
+`ALLOWED_HOSTS = [localhost, 127.0.0.1]`
 
-ALLOWED_HOSTS = [localhost, 127.0.0.1]
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'your-email@gmail.com'
-EMAIL_HOST_PASSWORD = 'your-app-password'
+`EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'`
+`EMAIL_HOST = 'smtp.gmail.com'`
+`EMAIL_PORT = 587`
+`EMAIL_USE_TLS = True`
+`EMAIL_HOST_USER = 'your-email@gmail.com'`
+`EMAIL_HOST_PASSWORD = 'your-app-password'`
 
 3. Run Migrations
    ```sh

@@ -65,12 +65,12 @@ The E-Invite App is a web application that allows users to create and manage ele
   - Configure your `settings.py` with your database and other settings
     ```sh
     invite_project/settings.py
-  `DATABASES = {
-     'default': {
+    `DATABASES = {
+      'default': {
          'ENGINE': 'django.db.backends.sqlite3',
-         'NAME': BASE_DIR / 'db.sqlite3',
-     }
-  }
+            'NAME': BASE_DIR / 'db.sqlite3',
+       }
+    }
 
     ALLOWED_HOSTS = [localhost, 127.0.0.1]
 

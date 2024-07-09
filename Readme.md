@@ -130,16 +130,16 @@ The E-Invite App is a web application that allows users to create and manage ele
 ### Configuration
 
 #### Environment Variables
-   -Create a .env file in the root directory of your project and add the following environment variables:
-   -SECRET_KEY=your_secret_key
-   -DEBUG=True
-   -ALLOWED_HOSTS=localhost,127.0.0.1
-   -EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
-   -EMAIL_HOST=smtp.gmail.com
-   -EMAIL_PORT=587
-   -EMAIL_USE_TLS=True
-   -EMAIL_HOST_USER=your_email@gmail.com
-   -EMAIL_HOST_PASSWORD=your_app_password
+   - Create a .env file in the root directory of your project and add the following environment variables:
+   - SECRET_KEY=your_secret_key
+   - DEBUG=True
+   - ALLOWED_HOSTS=localhost,127.0.0.1
+   - EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
+   - EMAIL_HOST=smtp.gmail.com
+   - EMAIL_PORT=587
+   - EMAIL_USE_TLS=True
+   - EMAIL_HOST_USER=your_email@gmail.com
+   - EMAIL_HOST_PASSWORD=your_app_password
 
 ### Usage
  #### Sending Invites

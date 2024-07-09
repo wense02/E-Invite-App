@@ -50,7 +50,8 @@ The E-Invite App is a web application that allows users to create and manage ele
    git clone https://github.com/yourusername/invite_app.git
    cd invite_app
 
-### Backend configuration
+## Backend configuration
+
   - Create a Virtual Enviroment
   - python -m venv env
   - source env/bin/activate  # On Windows use `env\Scripts\activate`
@@ -60,23 +61,24 @@ The E-Invite App is a web application that allows users to create and manage ele
 
 2. Django Settings
   - Configure your settings.py with your database and other settings
-  # invite_project/settings.py
+ 
+  #### invite_project/settings.py
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+- DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': BASE_DIR / 'db.sqlite3',
+     }
+ }
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+- ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'your-email@gmail.com'
-EMAIL_HOST_PASSWORD = 'your-app-password'
+- EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+- EMAIL_HOST = 'smtp.gmail.com'
+- EMAIL_PORT = 587
+- EMAIL_USE_TLS = True
+- EMAIL_HOST_USER = 'your-email@gmail.com'
+- EMAIL_HOST_PASSWORD = 'your-app-password'
 
 3. Run Migrations
    - python manage.py migrate
@@ -87,7 +89,8 @@ EMAIL_HOST_PASSWORD = 'your-app-password'
 5. Run the Django Development Server
     - python manage.py runserver
 
-### Frontend Configuration
+## Frontend Configuration
+
 - Navigate to the Frontend Directory
   - cd Frontend/invite-app
 
@@ -98,36 +101,41 @@ EMAIL_HOST_PASSWORD = 'your-app-password'
   - npm start
 
 ### Running the Application
+
 Ensure that both the backend and frontend servers are running.
 Access the application at http://localhost:3000.
 
 
 ### API Endpoints
-Auth Endpoints
-POST /api/auth/login/ - Login a user
-POST /api/auth/register/ - Register a new user
-POST /api/auth/refresh/ - Refresh JWT token
+
+#### Auth Endpoints
+
+- POST /api/auth/login/ - Login a user
+- POST /api/auth/register/ - Register a new user
+- POST /api/auth/refresh/ - Refresh JWT token
 
 ### Invite Endpoints
-POST /api/invites/ - Send an invite
-GET /api/invites/ - Get all invites
+
+- POST /api/invites/ - Send an invite
+- GET /api/invites/ - Get all invites
 
 ### Configuration
+
 - Environment Variables
 Create a .env file in the root directory of your project and add the following environment variables:
 
-SECRET_KEY=your_secret_key
-DEBUG=True
-ALLOWED_HOSTS=localhost,127.0.0.1
-EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
-EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER=your_email@gmail.com
-EMAIL_HOST_PASSWORD=your_app_password
+- SECRET_KEY=your_secret_key
+- DEBUG=True
+- ALLOWED_HOSTS=localhost,127.0.0.1
+- EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
+- EMAIL_HOST=smtp.gmail.com
+- EMAIL_PORT=587
+- EMAIL_USE_TLS=True
+- EMAIL_HOST_USER=your_email@gmail.com
+- EMAIL_HOST_PASSWORD=your_app_password
 
 ### Usage
-- Sending Invites
+ #### Sending Invites
     - Register and log in to your account.
     - Create a new invitation.
     - Fill in the invite details and design your card.
